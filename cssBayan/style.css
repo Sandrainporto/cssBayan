@@ -1,0 +1,59 @@
+@import "./normalize.css";
+body{
+	background: #3f413f;
+
+}
+.accordion{
+max-width: 90rem;
+margin: 1.875rem auto ;
+border: 0.3rem solid #742727;
+padding: 1rem;
+
+}
+.accordion__container{
+	max-width: 45rem;
+	margin: 0 auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+}
+.accordion__title{
+	font-size: 2.5rem;
+	padding: 0.5rem;
+	text-align: center;
+	font-weight: 700;
+	color: #ffffff;
+	border-bottom: 0.125rem solid white;
+} 
+
+.accordion__item {
+	border: 0.3rem solid #307ba7;
+	border-radius: 2%;
+margin: 0.93rem 0;
+}
+.item__input{
+	display: none;
+}
+.item__title{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	font-size: 1.5rem;
+	padding: 1rem;
+	text-align: left;
+	font-weight: 500;
+	color: #b4ec59;
+	background: #2f93a0;
+}
+.item__container{
+	display: flex;
+	justify-content: center;
+	padding: 5%;
+	background: #393574;
+
+}
+.item__image{
+	width: 100%;
+
+}
