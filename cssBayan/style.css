@@ -1,41 +1,58 @@
 @import "./normalize.css";
+html {
+	scroll-behavior: smooth; } 
 body{
+	height: 100%;
 	background: #3f413f;
+	
+}
+.accordion {
+	max-width: 90rem;
+	margin: 0 auto;
+	border: 0.3rem solid #742727;
+	padding: 1rem;
+	min-height: 100%;
+	overflow: hidden;
 
 }
-.accordion{
-max-width: 90rem;
-margin: 1.875rem auto ;
-border: 0.3rem solid #742727;
-padding: 1rem;
-
-}
-.accordion__container{
+.accordion__container {
 	max-width: 45rem;
 	margin: 0 auto;
-display: flex;
-flex-direction: column;
-justify-content: center;
-
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
-.accordion__title{
+.accordion__title {
 	font-size: 2.5rem;
 	padding: 0.5rem;
 	text-align: center;
 	font-weight: 700;
 	color: #ffffff;
 	border-bottom: 0.125rem solid white;
-} 
+}
 
 .accordion__item {
 	border: 0.3rem solid #307ba7;
 	border-radius: 2%;
-margin: 0.93rem 0;
+	margin: 0.2rem 0;
 }
-.item__input{
+.item__input {
 	display: none;
+
 }
-.item__title{
+.item__input:checked ~ .item__container {
+	display: flex;
+
+}
+
+.item__input:checked ~ .item__title {
+	background: #8b14b9;
+}
+.item__input:checked ~ .item__title span {
+	transform: rotate(90deg);
+}
+
+.item__title {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: nowrap;
@@ -45,15 +62,30 @@ margin: 0.93rem 0;
 	font-weight: 500;
 	color: #b4ec59;
 	background: #2f93a0;
+	cursor: pointer;
+	transition: background 0.2s ease-out;
 }
-.item__container{
-	display: flex;
-	justify-content: center;
+.item__title:hover {
+	background: #011214;
+}
+
+.item__container {
+	display: none;
 	padding: 5%;
+
 	background: #393574;
+	height: 18%;
 
 }
-.item__image{
+.item__image {
 	width: 100%;
+	object-fit: contain;
+	animation-name: Appearance;
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+}
 
+@keyframes Appearance {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
