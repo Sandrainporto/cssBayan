@@ -24,13 +24,17 @@ body {
 	padding: 0 0.8em 0.8em;
 	text-align: left;
 	font-weight: 700;
+	color: black;
 }
 
 .accordion__item {
 	border: 0.3rem solid #000000;
 	border-radius: 2%;
 	margin: 0.2rem 0;
-	
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+
 }
 .item__input {
 	display: none;
@@ -42,8 +46,8 @@ body {
 	
 }
 
-.item__input:checked ~ .item__title {
-	color: rgb(0, 0, 0);
+.item__input:checked + .item__title {
+	color: black;
 }
 .item__input:checked ~ .item__title span {
 	transform: rotate(90deg);
@@ -63,10 +67,10 @@ body {
 	transition: background 0.2s ease-out;
 	
 }
-.item__title:hover {
-	color: #f39508;
+/* .item__title:hover {
+	color: #08f32f;
 	transition: all 0.7s ease;
-}
+} */
 
 .item__container {
 	display: none;
@@ -196,3 +200,5 @@ display: block;
 	opacity: 0.5;
     color: rgb(71, 71, 185) !important;
 }
+
+
